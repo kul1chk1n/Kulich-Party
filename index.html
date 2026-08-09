@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <title>Приглашение на День рождения</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress"><span></span></div>
+
+  <main>
+    <section class="hero reveal">
+      <div class="eyebrow">PERSONAL INVITATION</div>
+      <h1>Вы получили<br>приглашение</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-sub">на День Рождения</p>
+      <button class="unlock" id="unlockBtn" type="button">
+        <span class="lock">⌁</span>
+        <span>Разблокировать</span>
+      </button>
+    </section>
+
+    <section class="intro section reveal">
+      <div class="giant-letter">30</div>
+      <h2>День Рождения</h2>
+      <div class="script">[ ИМЯ ]</div>
+      <p class="lead">Дорогие родные<br>и друзья!</p>
+      <p>Я собираю самых близких людей на одну большую ночь — с музыкой, танцами, закусками, играми и атмосферой, которую хочется запомнить.</p>
+      <p>Буду очень рад видеть вас на своём празднике.</p>
+    </section>
+
+    <section class="section reveal date-section">
+      <div class="label">DATE</div>
+      <div class="date">24—26<br><small>АВГУСТА 2026</small></div>
+      <div class="place">Якутск · загородный коттедж</div>
+    </section>
+
+    <section class="section reveal schedule">
+      <h2>Программа</h2>
+      <div class="timeline">
+        <article><time>18:00</time><div><b>Сбор гостей</b><p>Знакомство, закуски и музыка</p></div></article>
+        <article><time>20:00</time><div><b>Шашлык & игры</b><p>Пив-понг, PS5 и активная часть вечера</p></div></article>
+        <article><time>22:00</time><div><b>DJ SET</b><p>Танцы, свет и большая вечеринка во дворе</p></div></article>
+        <article><time>00:00</time><div><b>Продолжаем</b><p>Кальян, музыка и ночные посиделки</p></div></article>
+        <article><time>утро</time><div><b>Завтрак</b><p>Для тех, кто останется ночевать</p></div></article>
+      </div>
+    </section>
+
+    <section class="section reveal countdown-section">
+      <div class="label">COUNTDOWN</div>
+      <div class="countdown" id="countdown">
+        <div><strong>--</strong><span>дней</span></div>
+        <div><strong>--</strong><span>часов</span></div>
+        <div><strong>--</strong><span>минут</span></div>
+        <div><strong>--</strong><span>секунд</span></div>
+      </div>
+      <p class="muted">Дата и время можно изменить в <code>script.js</code>.</p>
+    </section>
+
+    <section class="section reveal details">
+      <h2>Важное</h2>
+      <div class="detail-card">
+        <span>01</span><div><b>Формат</b><p>Ночная вечеринка в коттедже. Не все гости обязаны оставаться на ночь.</p></div>
+      </div>
+      <div class="detail-card">
+        <span>02</span><div><b>Что будет</b><p>DJ, дискотека, шашлык, закуски, пив-понг, PS5, водяные игры и кальян.</p></div>
+      </div>
+      <div class="detail-card">
+        <span>03</span><div><b>Дресс-код</b><p>Свободный. Главное — удобно для танцев и отдыха. Для улицы возьмите сменную одежду.</p></div>
+      </div>
+      <div class="detail-card">
+        <span>04</span><div><b>Ночёвка</b><p>Места ограничены. В анкете укажите, планируете ли остаться.</p></div>
+      </div>
+    </section>
+
+    <section class="section reveal gifts">
+      <div class="dot"></div>
+      <p>Не переживайте насчёт подарков. Главное — ваше присутствие и хорошее настроение.</p>
+      <p>Если всё же захотите поздравить лично — это можно сделать до или после основной части праздника.</p>
+    </section>
+
+    <section class="section reveal dress">
+      <h2>Дресс-код</h2>
+      <p>Чёрный · графит · белый · нейтральные оттенки</p>
+      <div class="palette"><i></i><i></i><i></i><i></i><i></i></div>
+      <small>Необязательно, но будет красиво.</small>
+    </section>
+
+    <section class="section reveal location">
+      <h2>Место</h2>
+      <p class="place-big">[ НАЗВАНИЕ КОТТЕДЖА ]</p>
+      <p>[ АДРЕС / ЛОКАЦИЯ ]</p>
+      <div class="map-placeholder">
+        <div class="pin">●</div>
+        <span>Здесь будет карта</span>
+      </div>
+      <a class="button" id="mapLink" href="#" target="_blank" rel="noopener">Как добраться</a>
+    </section>
+
+    <section class="section reveal rsvp">
+      <h2>Анкета гостя</h2>
+      <p class="muted">Пожалуйста, заполните форму — это поможет организовать еду, напитки и ночёвку.</p>
+      <form id="rsvpForm">
+        <label>Ваше ФИО<input required name="name" placeholder="ФИО"></label>
+        <fieldset>
+          <legend>Сможете ли присутствовать?</legend>
+          <label class="choice"><input required type="radio" name="attendance" value="Да, приду"> Я с удовольствием приду</label>
+          <label class="choice"><input type="radio" name="attendance" value="Не смогу"> К сожалению, не смогу</label>
+          <label class="choice"><input type="radio" name="attendance" value="Сообщу позже"> Сообщу позже</label>
+        </fieldset>
+        <fieldset>
+          <legend>Останетесь ночевать?</legend>
+          <label class="choice"><input type="radio" name="sleep" value="Да"> Да</label>
+          <label class="choice"><input type="radio" name="sleep" value="Нет"> Нет</label>
+          <label class="choice"><input type="radio" name="sleep" value="Не знаю"> Пока не знаю</label>
+        </fieldset>
+        <fieldset>
+          <legend>Что предпочитаете из напитков?</legend>
+          <label class="choice"><input type="checkbox" name="drink" value="Пиво"> Пиво</label>
+          <label class="choice"><input type="checkbox" name="drink" value="Водка"> Водка</label>
+          <label class="choice"><input type="checkbox" name="drink" value="Коктейли"> Коктейли</label>
+          <label class="choice"><input type="checkbox" name="drink" value="Безалкогольное"> Безалкогольное</label>
+        </fieldset>
+        <label>Комментарий<textarea name="comment" rows="4" placeholder="Аллергии, пожелания, с кем будете..."></textarea></label>
+        <button class="submit" type="submit">Отправить</button>
+      </form>
+      <div class="success" id="success">Спасибо! Ответ сохранён на этом устройстве. Для настоящей отправки подключите Telegram/почту/базу данных.</div>
+    </section>
+
+    <footer class="section footer">
+      <div class="script">До встречи!</div>
+      <p>[ ИМЯ ] · Якутск · 2026</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
