@@ -1,0 +1,7 @@
+<?php
+// Скопируйте файл в config.php и впишите НОВЫЙ токен после его перевыпуска в BotFather.
+const TELEGRAM_BOT_TOKEN = 'PASTE_NEW_BOT_TOKEN_HERE';
+// Напишите своему боту /start, затем укажите сюда chat_id. Его можно узнать через getUpdates.
+const TELEGRAM_CHAT_ID = 'PASTE_ADMIN_CHAT_ID_HERE';
+const ADMIN_PASSWORD = 'CHANGE_THIS_PASSWORD';
+?>

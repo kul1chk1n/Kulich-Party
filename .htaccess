@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^(config\.php|data/responses\.json)$">
+  Require all denied
+</FilesMatch>
